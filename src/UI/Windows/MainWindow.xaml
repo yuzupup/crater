@@ -1,0 +1,36 @@
+﻿<Window 
+    x:Class="Crater.UI.Windows.MainWindow" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:Crater.UI.Windows" 
+    xmlns:Controls="clr-namespace:Crater.UI.Controls"
+    mc:Ignorable="d" 
+    Title="Crater" 
+    Height="1024" 
+    Width="768">
+    <Window.Resources>
+
+    <DataTemplate x:Key="SongTemplate">
+        <TextBlock Text="{Binding Path=SingleLineDisplayName}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="PlaylistTemplate">
+        <TextBlock Text="{Binding Path=Name}"/>
+    </DataTemplate>
+
+    </Window.Resources>
+
+    <DockPanel LastChildFill="True">
+        <Controls:MainMenu DockPanel.Dock="Top"/>
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Controls:FilteredList x:Name="PlaylistsList" Title="Playlists" Grid.Column="0" ItemTemplate="{StaticResource PlaylistTemplate}"/>
+            <Controls:FilteredList x:Name="SongsList" Title="Songs" Grid.Column="1" ItemTemplate="{StaticResource SongTemplate}"/>
+        </Grid>
+    </DockPanel>
+</Window>

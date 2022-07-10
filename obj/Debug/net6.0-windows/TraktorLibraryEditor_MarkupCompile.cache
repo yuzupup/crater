@@ -1,0 +1,20 @@
+﻿TraktorLibraryEditor
+1.0.0.0
+
+winexe
+C#
+.cs
+h:\MyDocs\Programming Projects\TraktorLibraryEditor\obj\Debug\net6.0-windows\
+TraktorLibraryEditor
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+h:\MyDocs\Programming Projects\TraktorLibraryEditor\App.xaml
+3-441940929
+
+7664422464
+1941645785384
+Controls\FilteredList.xaml;Controls\MainMenu.xaml;MainWindow.xaml;
+
+True
+
